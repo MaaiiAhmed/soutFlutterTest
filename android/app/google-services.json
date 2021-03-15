@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "60088487655",
+    "project_id": "souttest",
+    "storage_bucket": "souttest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60088487655:android:8eb6a51d1e7c4aa74e1c42",
+        "android_client_info": {
+          "package_name": "com.sout.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60088487655-6kfj53qpidk88hlugmb2p5m2jcj84ggh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ7l6eGCriTRbNw7khIgvjhsIzJucOxdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60088487655-6kfj53qpidk88hlugmb2p5m2jcj84ggh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,6 +13,7 @@ class LikeModel {
 
   factory LikeModel.fromDocument(DocumentSnapshot doc) {
     return LikeModel(
+      // id: doc.data()['id'],
       userid: doc.data()["userid"],
     );
   }
@@ -29,7 +30,7 @@ class LikeModel {
             .doc();
 
     ///////////////Test////////////////
-    // like.userid = "j9ppSV3XMgP96xIYYrfFLfN4B4u2";
+    like.userid = "j9ppSV3XMgP96xIYYrfFLfN4B4u2";
 
     documentReference.set(like.toJson());
   }
@@ -41,18 +42,17 @@ class LikeModel {
         Firestore.instance.collection('post').doc(postId).collection('like');
     // ignore: deprecated_member_use
     QuerySnapshot likesQuery = await ref.getDocuments();
-
-    HashMap<String, LikeModel> likesHashMap =
-        new HashMap<String, LikeModel>();
+    HashMap<String, LikeModel> likesHashMap = new HashMap<String, LikeModel>();
 
     // ignore: deprecated_member_use
     likesQuery.documents.forEach((document) {
-      likesHashMap.putIfAbsent(document['id'], () {
+      // ignore: deprecated_member_use
+      likesHashMap.putIfAbsent(ref.doc().documentID, () {
         var likeModel = new LikeModel.fromDocument(document);
         return likeModel;
       });
     });
-    print(likesHashMap.values.toList().length);
+    print("likesss " + likesHashMap.values.toList().length.toString());
 
     return likesHashMap.values.toList();
   }
